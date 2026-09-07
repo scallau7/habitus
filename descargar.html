@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Habitus</title>
+<meta name="description" content="Registrá tus hábitos, armá tu racha y convertí tu constancia en recompensas. Santa Cruz de la Sierra.">
+<style>
+  :root { --tinta:#0A0A0A; --papel:#FAFAF8; --gris:#6B6B68; --linea:#E4E4E0; --suave:#F2F1ED; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--papel); color:var(--tinta);
+    font-family:"Geist","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .env { max-width:560px; margin:0 auto; padding:0 24px 72px; }
+  .marca { display:flex; align-items:center; gap:11px; padding:34px 0 0; }
+  .marca span { font-weight:600; letter-spacing:-0.01em; font-size:18px; }
+
+  .hero { padding:52px 0 40px; text-align:center; }
+  .anillo { margin:0 auto 26px; display:block; }
+  h1 { font-size:34px; line-height:1.12; letter-spacing:-0.035em; margin:0 0 14px; font-weight:650; }
+  .bajada { font-size:18px; color:var(--gris); margin:0; }
+
+  .bloque { border-top:1px solid var(--linea); padding:34px 0; }
+  h2 { font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); font-weight:600; margin:0 0 16px; }
+  p { margin:0 0 14px; }
+
+  .btn {
+    display:block; width:100%; padding:18px; text-align:center; text-decoration:none;
+    font-size:17px; font-weight:640; color:var(--papel); background:var(--tinta);
+    border:none; border-radius:15px; font-family:inherit; cursor:pointer;
+  }
+  .btn.linea { color:var(--tinta); background:transparent; border:1.5px solid var(--tinta); }
+  .btn:active { transform:scale(.99); }
+  .sub { font-size:14px; color:var(--gris); text-align:center; margin:12px 0 0; }
+
+  .pasos { counter-reset:p; list-style:none; padding:0; margin:22px 0 0; }
+  .pasos li { counter-increment:p; position:relative; padding:0 0 16px 38px; font-size:15.5px; }
+  .pasos li::before {
+    content:counter(p); position:absolute; left:0; top:-1px; width:25px; height:25px;
+    border-radius:50%; background:var(--suave); color:var(--tinta);
+    font-size:13px; font-weight:640; display:flex; align-items:center; justify-content:center;
+  }
+
+  .caja { background:var(--suave); border-radius:15px; padding:22px; }
+  .caja p:last-child { margin-bottom:0; }
+
+  .lista { list-style:none; padding:0; margin:0; }
+  .lista li { padding:13px 0; border-top:1px solid var(--linea); display:flex; gap:13px; align-items:baseline; font-size:15.5px; }
+  .lista li:first-child { border-top:none; padding-top:0; }
+  .punto { width:6px;height:6px;border-radius:50%;background:var(--tinta);flex:0 0 6px;transform:translateY(-2px); }
+
+  footer { border-top:1px solid var(--linea); padding-top:26px; color:var(--gris); font-size:14px; text-align:center; }
+  a { color:var(--tinta); text-underline-offset:3px; }
+  footer a { color:var(--gris); }
+  [hidden] { display:none !important; }
+
+  @media (max-width:520px){ body{font-size:16px} h1{font-size:29px} }
+</style>
+</head>
+<body>
+<div class="env">
+
+  <div class="marca">
+    <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#0A0A0A" stroke-width="8.5"/>
+      <circle cx="50" cy="14" r="13.5" fill="#FAFAF8"/>
+      <circle cx="50" cy="14" r="10.5" fill="#0A0A0A"/>
+    </svg>
+    <span>habitus</span>
+  </div>
+
+  <div class="hero">
+    <svg class="anillo" width="72" height="72" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#0A0A0A" stroke-width="8.5"/>
+      <circle cx="50" cy="14" r="13.5" fill="#FAFAF8"/>
+      <circle cx="50" cy="14" r="10.5" fill="#0A0A0A"/>
+    </svg>
+    <h1>Tu constancia vale.</h1>
+    <p class="bajada">Registrá tus hábitos, armá tu racha, y que la disciplina que ya tenés empiece a valer algo.</p>
+  </div>
+
+  <!-- ANDROID -->
+  <div class="bloque" id="android" hidden>
+    <h2>Para Android</h2>
+    <a class="btn" id="apk" href="/habitus.apk" download>Descargar Habitus</a>
+    <p class="sub">Archivo de 5,8 MB · versión 27.5</p>
+    <ol class="pasos">
+      <li>Tocá el botón y esperá a que termine la descarga.</li>
+      <li>Abrí el archivo descargado.</li>
+      <li>Android te va a advertir que viene de una fuente desconocida. Es normal: todavía no estamos en la Play Store. Tocá <strong>Configuración</strong> y permití la instalación.</li>
+      <li>Instalá, abrí, y entrá con tu cuenta de Google.</li>
+    </ol>
+  </div>
+
+  <!-- IPHONE -->
+  <div class="bloque" id="iphone" hidden>
+    <h2>Para iPhone</h2>
+    <div class="caja">
+      <p><strong>Estamos terminando la versión de iPhone.</strong></p>
+      <p style="margin-bottom:0">Escribinos y te mandamos el enlace apenas esté lista. Va a ser esta semana.</p>
+    </div>
+    <a class="btn linea" style="margin-top:20px" href="mailto:support@get-habitus.com?subject=Quiero%20Habitus%20para%20iPhone&amp;body=Hola%2C%20quiero%20probar%20Habitus%20en%20mi%20iPhone.%20Mi%20nombre%20es%3A%20">Avisame cuando esté</a>
+    <p class="sub">Mientras tanto podés usarla desde el navegador</p>
+    <a class="btn linea" style="margin-top:12px" href="https://get-habitus.com/">Abrir en el navegador</a>
+  </div>
+
+  <!-- COMPUTADORA -->
+  <div class="bloque" id="escritorio" hidden>
+    <h2>Estás en una computadora</h2>
+    <p>Habitus es una aplicación para teléfono. Entrá a <strong>get-habitus.com/descargar.html</strong> desde tu celular, o probala acá mismo en el navegador.</p>
+    <a class="btn linea" href="https://get-habitus.com/">Abrir en el navegador</a>
+  </div>
+
+  <div class="bloque">
+    <h2>Qué hace</h2>
+    <ul class="lista">
+      <li><span class="punto"></span><span>Marcás los hábitos que cumplís cada día y armás tu racha.</span></li>
+      <li><span class="punto"></span><span>Definís tu meta semanal, la que vos puedas sostener.</span></li>
+      <li><span class="punto"></span><span>Ganás puntos haciendo check-in en los locales de la red, escaneando su QR.</span></li>
+      <li><span class="punto"></span><span>Canjeás esos puntos como descuentos en otros comercios.</span></li>
+    </ul>
+  </div>
+
+  <div class="bloque">
+    <h2>La red se está armando</h2>
+    <p>Todavía estamos sumando gimnasios, nutricionistas y cafés en Santa Cruz. Los puntos que ganes ahora <strong>no vencen hasta 90 días después de que abra el primer local</strong>, así que entrar temprano no te cuesta nada.</p>
+    <p style="margin-bottom:0"><a href="https://get-habitus.com/comercios.html">¿Tenés un local y querés sumarte?</a></p>
+  </div>
+
+  <footer>
+    Habitus · Santa Cruz de la Sierra<br>
+    <a href="https://get-habitus.com/terminos.html">Condiciones</a> ·
+    <a href="https://get-habitus.com/privacidad.html">Privacidad</a>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var ua = navigator.userAgent || "";
+    var esAndroid = /Android/i.test(ua);
+    var esIOS = /iPhone|iPad|iPod/i.test(ua) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var id = esAndroid ? "android" : (esIOS ? "iphone" : "escritorio");
+    var el = document.getElementById(id);
+    if (el) el.hidden = false;
+  })();
+</script>
+
+</body>
+</html>
