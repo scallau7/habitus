@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habitus para comercios · Santa Cruz de la Sierra</title>
+<meta name="description" content="Tus socios más constantes son los que más renuevan. Habitus premia la constancia demostrada y te muestra, por primera vez, quiénes son.">
+<style>
+  :root { --tinta:#0A0A0A; --papel:#FAFAF8; --gris:#6B6B68; --linea:#E4E4E0; --suave:#F2F1ED; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; background:var(--papel); color:var(--tinta);
+    font-family:"Geist","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .env { max-width:660px; margin:0 auto; padding:0 24px; }
+  .marca { display:flex; align-items:center; gap:11px; padding:34px 0 0; }
+  .marca span { font-weight:600; letter-spacing:-0.01em; font-size:18px; }
+
+  .hero { padding:64px 0 56px; border-bottom:1px solid var(--linea); }
+  .kicker { font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--gris); margin:0 0 18px; font-weight:600; }
+  h1 { font-size:38px; line-height:1.1; letter-spacing:-0.035em; margin:0 0 20px; font-weight:650; }
+  .bajada { font-size:19px; color:var(--gris); margin:0; }
+
+  h2 { font-size:26px; line-height:1.2; letter-spacing:-0.025em; margin:0 0 16px; font-weight:640; }
+  h3 { font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); font-weight:600; margin:0 0 10px; }
+  section { padding:52px 0; border-bottom:1px solid var(--linea); }
+  p { margin:0 0 16px; }
+  strong { font-weight:640; }
+
+  .cifra { font-size:52px; line-height:1; letter-spacing:-0.04em; font-weight:650; margin:0 0 6px; }
+  .cifra small { font-size:17px; font-weight:500; color:var(--gris); letter-spacing:0; }
+
+  .lista { list-style:none; padding:0; margin:22px 0 0; }
+  .lista li { padding:14px 0; border-top:1px solid var(--linea); display:flex; gap:14px; align-items:baseline; }
+  .lista li b { font-weight:640; }
+  .punto { width:6px;height:6px;border-radius:50%;background:var(--tinta);flex:0 0 6px; transform:translateY(-2px); }
+
+  .caja { background:var(--suave); border-radius:16px; padding:26px 24px; margin:24px 0 0; }
+  .caja p:last-child { margin-bottom:0; }
+
+  .cita { border-left:2px solid var(--tinta); padding:2px 0 2px 20px; margin:26px 0; font-size:19px; }
+
+  form { margin:26px 0 0; }
+  label { display:block; font-size:13px; font-weight:600; margin:16px 0 6px; }
+  input, select {
+    width:100%; padding:13px 14px; font-family:inherit; font-size:16px; color:var(--tinta);
+    background:#fff; border:1px solid var(--linea); border-radius:12px; -webkit-appearance:none; appearance:none;
+  }
+  input:focus, select:focus { outline:none; border-color:var(--tinta); }
+  select { background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%230A0A0A' stroke-width='1.6'><path d='M1 1l5 5 5-5'/></svg>"); background-repeat:no-repeat; background-position:right 15px center; }
+  button {
+    width:100%; margin-top:26px; padding:17px; font-family:inherit; font-size:16px; font-weight:640;
+    color:var(--papel); background:var(--tinta); border:none; border-radius:14px; cursor:pointer;
+  }
+  button:active { transform:scale(.99); }
+  .nota { font-size:13.5px; color:var(--gris); text-align:center; margin:12px 0 0; }
+
+  footer { padding:44px 0 64px; color:var(--gris); font-size:14px; }
+  footer a { color:var(--gris); }
+  a { color:var(--tinta); text-underline-offset:3px; }
+
+  @media (max-width:520px){
+    body{font-size:16px}
+    h1{font-size:30px}
+    h2{font-size:22px}
+    .hero{padding:44px 0 40px}
+    section{padding:40px 0}
+    .cifra{font-size:42px}
+  }
+</style>
+</head>
+<body>
+
+<div class="env">
+
+  <div class="marca">
+    <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#0A0A0A" stroke-width="8.5"/>
+      <circle cx="50" cy="14" r="13.5" fill="#FAFAF8"/>
+      <circle cx="50" cy="14" r="10.5" fill="#0A0A0A"/>
+    </svg>
+    <span>habitus</span>
+  </div>
+
+  <div class="hero">
+    <p class="kicker">Para gimnasios, nutricionistas y clínicas</p>
+    <h1>¿Cuántos socios se te dieron de baja en marzo?</h1>
+    <p class="bajada">Si la respuesta es "no sé exactamente", ahí está la conversación. Habitus existe para eso.</p>
+  </div>
+
+  <section>
+    <h3>La sangría invisible</h3>
+    <h2>Enero está lleno. Marzo se vacía. Y nadie sabe por qué.</h2>
+    <p>Un gimnasio pierde entre el 4% y el 8% de sus socios cada mes. No se nota porque no se mide: se siente en la caja de fin de mes, cuando ya es tarde.</p>
+    <div class="caja">
+      <p class="cifra">Bs 1.700 <small>al mes</small></p>
+      <p style="margin:0;color:var(--gris)">Es lo que vale <strong>cada punto de retención</strong> en un gimnasio de 380 socios a Bs 450. Un punto. No diez.</p>
+    </div>
+    <p style="margin-top:22px">El socio que viene tres veces por semana renueva. El que dejó de venir hace tres semanas ya se fue, aunque siga pagando. La diferencia entre los dos es información que hoy no tenés.</p>
+  </section>
+
+  <section>
+    <h3>Qué hace Habitus</h3>
+    <h2>Premia la constancia demostrada, no el consumo.</h2>
+    <p>Tus socios ganan puntos <strong>escaneando un QR en tu local</strong>, con el GPS confirmando que estuvieron ahí. No por abrir una aplicación, no por sus pasos, no por declarar nada. Solo por haber venido.</p>
+    <p>Esos puntos los canjean como descuentos en otros comercios de la red: cafés, restaurantes, suplementos, barberías. <strong>El beneficio para tu socio no sale de tu bolsillo.</strong></p>
+    <div class="cita">Una razón más para venir hoy, que además te dice quién vino.</div>
+  </section>
+
+  <section>
+    <h3>Lo que vas a ver</h3>
+    <h2>Tus números, por primera vez.</h2>
+    <p>Un panel en vivo, con datos <strong>agregados y anónimos</strong> de quienes visitan tu local:</p>
+    <ul class="lista">
+      <li><span class="punto"></span><span><b>Qué edad tienen</b> y cómo se reparten por género</span></li>
+      <li><span class="punto"></span><span><b>A qué hora y qué días</b> se llena de verdad tu local</span></li>
+      <li><span class="punto"></span><span><b>Cuántas veces al mes</b> vuelve un mismo cliente</span></li>
+      <li><span class="punto"></span><span><b>Tu tasa de retorno</b>, medida y no estimada</span></li>
+      <li><span class="punto"></span><span><b>Cuánto te cuesta un cliente nuevo</b> por Habitus, comparado con lo que pagás en publicidad</span></li>
+    </ul>
+    <p style="margin-top:22px;color:var(--gris);font-size:15px">Nunca vas a ver quién es una persona en particular. Ves que el 60% de tus visitantes tiene entre 25 y 34 años; nunca que María vino el martes.</p>
+  </section>
+
+  <section>
+    <h3>Programa Fundador</h3>
+    <h2>El riesgo lo corro yo.</h2>
+    <ul class="lista">
+      <li><span class="punto"></span><span><b>90 días sin costo.</b> Completos, sin letra chica.</span></li>
+      <li><span class="punto"></span><span><b>Sin permanencia.</b> Te vas cuando quieras, sin penalidad.</span></li>
+      <li><span class="punto"></span><span><b>Una meta por escrito.</b> Definimos juntos qué tiene que pasar para que valga la pena.</span></li>
+      <li><span class="punto"></span><span><b>Exclusividad de rubro por zona.</b> Si entrás, tu competencia de la cuadra no entra.</span></li>
+      <li><span class="punto"></span><span><b>Precio fundador congelado 12 meses:</b> Bs 400 al mes. La lista es Bs 700.</span></li>
+    </ul>
+    <div class="caja" style="margin-top:26px">
+      <p style="margin:0">Si a los 90 días no ves nada, no me pagás nada y quedamos como amigos. Lo único que te pido es que lo midamos con tus números, no con mi entusiasmo.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h3>Hablemos</h3>
+    <h2>Una reunión de veinte minutos.</h2>
+    <p>Completá esto y te llega el mensaje directo a mi WhatsApp. Contesto el mismo día.</p>
+
+    <form id="f" onsubmit="return enviar(event)">
+      <label for="local">Nombre del local</label>
+      <input id="local" required placeholder="Sport Motion">
+
+      <label for="rubro">Rubro</label>
+      <select id="rubro" required>
+        <option value="">Elegí una opción</option>
+        <option>Gimnasio</option>
+        <option>Estudio de yoga / pilates / crossfit</option>
+        <option>Nutricionista</option>
+        <option>Clínica o consultorio</option>
+        <option>Café o restaurante</option>
+        <option>Suplementos</option>
+        <option>Barbería o estética</option>
+        <option>Otro</option>
+      </select>
+
+      <label for="zona">Zona</label>
+      <input id="zona" required placeholder="Equipetrol Norte">
+
+      <label for="nombre">Tu nombre</label>
+      <input id="nombre" required placeholder="Marcelo Áñez">
+
+      <label for="tam">¿Cuántos socios o clientes atendés por mes?</label>
+      <select id="tam" required>
+        <option value="">Elegí una opción</option>
+        <option>Menos de 100</option>
+        <option>Entre 100 y 300</option>
+        <option>Entre 300 y 600</option>
+        <option>Más de 600</option>
+      </select>
+
+      <button type="submit">Escribir por WhatsApp</button>
+      <p class="nota">Se abre WhatsApp con el mensaje ya redactado. Lo revisás antes de enviarlo.</p>
+    </form>
+  </section>
+
+  <footer>
+    Habitus · Santa Cruz de la Sierra<br>
+    <a href="https://get-habitus.com/terminos.html">Condiciones</a> ·
+    <a href="https://get-habitus.com/privacidad.html">Privacidad</a> ·
+    <a href="mailto:support@get-habitus.com">support@get-habitus.com</a>
+  </footer>
+
+</div>
+
+<script>
+  var WHATSAPP = "59178525801";
+  function enviar(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var texto =
+      "Hola Santiago, vi la página de Habitus y me interesa.\n\n" +
+      "Local: " + v("local") + "\n" +
+      "Rubro: " + v("rubro") + "\n" +
+      "Zona: " + v("zona") + "\n" +
+      "Mi nombre: " + v("nombre") + "\n" +
+      "Tamaño: " + v("tam");
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto), "_blank");
+    return false;
+  }
+</script>
+
+</body>
+</html>
