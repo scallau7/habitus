@@ -40,7 +40,8 @@
   @media (max-width:640px){ .navacc .ocultachico{display:none} }
 
   /* ---------- portada ---------- */
-  .portada{padding:76px 0 40px;display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:center}
+  .principal{padding:64px 0 0;display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:start}
+  .portadatxt{padding-bottom:52px}
   h1{font-size:56px;line-height:1.03;letter-spacing:-.04em;margin:0 0 22px;font-weight:650}
   .lead{font-size:20px;color:var(--gris);margin:0 0 32px;max-width:30ch}
   .acciones{display:flex;gap:12px;flex-wrap:wrap}
@@ -111,8 +112,7 @@
   .pnav svg{display:block;margin:0 auto 3px}
 
   /* ---------- recorrido ---------- */
-  .recorrido{padding:36px 0 0;display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:start}
-  .sticky{position:sticky;top:110px}
+  .sticky{position:sticky;top:96px}
   .paso{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:20px 0}
   .paso .num{font-size:12px;font-weight:640;letter-spacing:.1em;color:var(--mute);margin:0 0 14px}
   .paso h2{font-size:34px;line-height:1.13;letter-spacing:-.03em;margin:0 0 14px;font-weight:640}
@@ -153,11 +153,17 @@
   .pie{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
   @media (max-width:900px){
-    .portada,.recorrido{grid-template-columns:1fr;gap:34px}
-    .portada{padding:52px 0 0}
-    .telcol{display:flex;justify-content:center}
-    .recorrido .telcol{position:sticky;top:74px;z-index:10;background:linear-gradient(var(--papel) 72%,transparent);padding-bottom:16px}
+    .principal{grid-template-columns:1fr;gap:0}
+    .principal{padding:44px 0 0}
+    .portadatxt{padding-bottom:32px}
+    .telcol{display:flex;justify-content:center;position:sticky;top:74px;z-index:10;
+      background:linear-gradient(var(--papel) 74%,transparent);padding:0 0 16px}
     .sticky{position:static}
+    .principal .izquierda{display:contents}
+    .portadatxt{order:1}
+    .telcol{order:2}
+    .paso:nth-of-type(1){order:3}.paso:nth-of-type(2){order:4}
+    .paso:nth-of-type(3){order:5}.paso:nth-of-type(4){order:6}
     .paso{min-height:auto;padding:30px 0}
     h1{font-size:38px}
     .bloque h2{font-size:27px}
@@ -210,9 +216,10 @@
 
 <div class="env" id="arriba">
 
-  <!-- PORTADA -->
-  <div class="portada">
-    <div>
+  <!-- PORTADA + RECORRIDO: un solo teléfono que acompaña todo el scroll -->
+  <div class="principal">
+    <div class="izquierda">
+      <div class="portadatxt">
       <h1>Tu constancia<br>vale.</h1>
       <p class="lead">Marcá lo que cumplís, armá tu racha, y que la disciplina que ya tenés empiece a valer algo real.</p>
       <div class="acciones">
@@ -220,15 +227,8 @@
         <a class="btn linea grande" href="/">Probar en el navegador</a>
       </div>
       <p class="sello">Gratis · Santa Cruz de la Sierra</p>
-    </div>
-    <div class="telcol">
-      <div class="tel"><div class="pantalla" id="telPortada"></div></div>
-    </div>
-  </div>
+      </div>
 
-  <!-- RECORRIDO -->
-  <div class="recorrido">
-    <div>
       <div class="paso" data-escena="0">
         <p class="num">01</p>
         <h2>Marcá lo que cumpliste.</h2>
@@ -252,7 +252,7 @@
     </div>
     <div class="telcol">
       <div class="sticky">
-        <div class="tel"><div class="pantalla" id="telRecorrido"></div></div>
+        <div class="tel"><div class="pantalla" id="telUnico"></div></div>
       </div>
     </div>
   </div>
@@ -418,15 +418,13 @@
       nav('billetera')
   ];
 
-  var portada = document.getElementById('telPortada');
-  var recorrido = document.getElementById('telRecorrido');
+  var tel = document.getElementById('telUnico');
   function pintar(cont){
     cont.innerHTML = escenas.map(function(e,i){
       return '<div class="escena'+(i===0?' on':'')+'">'+e+'</div>';
     }).join('');
   }
-  if(portada) pintar(portada);
-  if(recorrido) pintar(recorrido);
+  if(tel) pintar(tel);
 
   function mostrar(cont, i){
     if(!cont) return;
@@ -438,15 +436,16 @@
   if('IntersectionObserver' in window){
     var obs = new IntersectionObserver(function(entradas){
       entradas.forEach(function(e){
-        if(e.isIntersecting) mostrar(recorrido, parseInt(e.target.dataset.escena,10));
+        if(e.isIntersecting) mostrar(tel, parseInt(e.target.dataset.escena,10));
       });
     }, { rootMargin:'-45% 0px -45% 0px' });
     for(var i=0;i<pasos.length;i++) obs.observe(pasos[i]);
   }
 
-  // la portada cicla sola
-  var n=0;
-  setInterval(function(){ n=(n+1)%escenas.length; mostrar(portada,n); }, 3200);
+  // al volver arriba, el teléfono vuelve a la primera escena
+  window.addEventListener('scroll', function(){
+    if(window.scrollY < 120) mostrar(tel, 0);
+  }, { passive:true });
 })();
 </script>
 
