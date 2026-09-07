@@ -17,10 +17,11 @@
   .marca { display:flex; align-items:center; gap:11px; padding:34px 0 0; }
   .marca span { font-weight:600; letter-spacing:-0.01em; font-size:18px; }
 
-  .hero { padding:52px 0 40px; text-align:center; }
-  .anillo { margin:0 auto 26px; display:block; }
-  h1 { font-size:34px; line-height:1.12; letter-spacing:-0.035em; margin:0 0 14px; font-weight:650; }
-  .bajada { font-size:18px; color:var(--gris); margin:0; }
+  .hero { padding:26px 0 24px; text-align:center; }
+  .anillo { margin:0 auto 16px; display:block; }
+  h1 { font-size:31px; line-height:1.1; letter-spacing:-0.035em; margin:0 0 10px; font-weight:650; }
+  .bajada { font-size:16.5px; color:var(--gris); margin:0; }
+  .bloque:first-of-type { border-top:none; padding-top:0; }
 
   .bloque { border-top:1px solid var(--linea); padding:34px 0; }
   h2 { font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); font-weight:600; margin:0 0 16px; }
@@ -92,25 +93,18 @@
   </div>
 
   <div class="hero">
-    <svg class="anillo" width="72" height="72" viewBox="0 0 100 100" aria-hidden="true">
-      <circle cx="50" cy="50" r="36" fill="none" stroke="#0A0A0A" stroke-width="8.5"/>
-      <circle cx="50" cy="14" r="13.5" fill="#FAFAF8"/>
-      <circle cx="50" cy="14" r="10.5" fill="#0A0A0A"/>
-    </svg>
     <h1>Tu constancia vale.</h1>
-    <p class="bajada">Registrá tus hábitos, armá tu racha, y que la disciplina que ya tenés empiece a valer algo.</p>
+    <p class="bajada">Registrá tus hábitos y armá tu racha.</p>
   </div>
 
   <!-- ANDROID -->
   <div class="bloque" id="android" hidden>
-    <h2>Para Android</h2>
-    <a class="btn" id="apk" href="/habitus.apk" download>Descargar Habitus</a>
-    <p class="sub">Archivo de 5,8 MB · versión 27.5</p>
+    <a class="btn" id="apk" href="/habitus.apk" download>Descargar la app</a>
+    <p class="sub">5,8 MB · gratis · sin cuenta previa</p>
     <ol class="pasos">
-      <li>Tocá el botón y esperá a que termine la descarga.</li>
-      <li>Abrí el archivo descargado.</li>
-      <li>Android te va a advertir que viene de una fuente desconocida. Es normal: todavía no estamos en la Play Store. Tocá <strong>Configuración</strong> y permití la instalación.</li>
-      <li>Instalá, abrí, y entrá con tu cuenta de Google.</li>
+      <li>Abrí el archivo cuando termine de bajar.</li>
+      <li>Android va a avisarte que viene de una <strong>fuente desconocida</strong>. Es normal, todavía no estamos en la Play Store: tocá <strong>Configuración</strong> y permitilo.</li>
+      <li>Instalá y entrá con Google. Listo.</li>
     </ol>
   </div>
 
