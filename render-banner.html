@@ -1,0 +1,53 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="robots" content="noindex"><title>render</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<style>body{margin:0;background:#333}canvas{display:block;margin:20px auto}</style>
+</head><body>
+<canvas id="c" width="1024" height="500"></canvas>
+<script>
+(async function(){
+  await document.fonts.load('600 76px Geist');
+  await document.fonts.load('400 27px Geist');
+  await document.fonts.ready;
+  const c = document.getElementById('c'), x = c.getContext('2d');
+  const TINTA='#0A0A0A', PAPEL='#FAFAF8', GRIS='#6B6B68';
+  x.fillStyle=PAPEL; x.fillRect(0,0,1024,500);
+
+  // --- lockup: anillo + palabra ---
+  const S=86, e=S/100;                       // el simbolo vive en un viewBox de 100
+  x.font='600 76px Geist, Inter, sans-serif';
+  const w = x.measureText('habitus').width;
+  const total = S + 22 + w;
+  const x0 = (1024-total)/2, yc = 232;       // centro vertical del lockup
+
+  // anillo
+  x.strokeStyle=TINTA; x.lineWidth=8.5*e;
+  x.beginPath(); x.arc(x0+50*e, yc, 36*e, 0, Math.PI*2); x.stroke();
+  // hueco de papel + punto
+  x.fillStyle=PAPEL; x.beginPath(); x.arc(x0+50*e, yc-36*e, 13.5*e, 0, Math.PI*2); x.fill();
+  x.fillStyle=TINTA; x.beginPath(); x.arc(x0+50*e, yc-36*e, 10.5*e, 0, Math.PI*2); x.fill();
+
+  // palabra
+  x.fillStyle=TINTA; x.textBaseline='middle';
+  x.fillText('habitus', x0+S+22, yc+2);
+
+  // --- lema ---
+  x.font='400 27px Geist, Inter, sans-serif';
+  const a='Tu constancia ', b='vale', p='.';
+  const wa=x.measureText(a).width;
+  x.font='600 27px Geist, Inter, sans-serif';
+  const wb=x.measureText(b).width;
+  x.font='400 27px Geist, Inter, sans-serif';
+  const wp=x.measureText(p).width;
+  let lx=(1024-(wa+wb+wp))/2; const ly=338;
+  x.fillStyle=GRIS; x.fillText(a, lx, ly); lx+=wa;
+  x.font='600 27px Geist, Inter, sans-serif'; x.fillStyle=TINTA;
+  x.fillText(b, lx, ly); lx+=wb;
+  x.font='400 27px Geist, Inter, sans-serif'; x.fillStyle=GRIS;
+  x.fillText(p, lx, ly);
+
+  window.__png = c.toDataURL('image/png');
+  window.__listo = true;
+  document.title = 'listo';
+})();
+</script></body></html>
