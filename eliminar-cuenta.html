@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliminar tu cuenta · Habitus</title>
+<meta name="description" content="Cómo eliminar tu cuenta de Habitus y todos tus datos. Qué se borra, qué se conserva y cuánto tarda.">
+<style>
+  :root { --tinta:#0A0A0A; --papel:#FAFAF8; --gris:#6B6B68; --linea:#E4E4E0; --suave:#F2F1ED; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:0; background:var(--papel); color:var(--tinta);
+    font-family:"Geist","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .envoltorio { max-width:680px; margin:0 auto; padding:64px 24px 96px; }
+  .marca { display:flex; align-items:center; gap:12px; margin-bottom:56px; }
+  .marca svg { display:block; }
+  .marca span { font-weight:600; letter-spacing:-0.01em; font-size:19px; }
+  h1 { font-size:34px; line-height:1.15; letter-spacing:-0.03em; margin:0 0 8px; font-weight:650; }
+  .fecha { color:var(--gris); font-size:15px; margin:0 0 48px; }
+  h2 {
+    font-size:15px; text-transform:uppercase; letter-spacing:0.08em; font-weight:600;
+    margin:48px 0 16px; padding-top:24px; border-top:1px solid var(--linea);
+  }
+  p { margin:0 0 16px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  li { margin-bottom:9px; }
+  strong { font-weight:600; }
+  a { color:var(--tinta); text-underline-offset:3px; }
+  .destacado { border-left:2px solid var(--tinta); padding:4px 0 4px 20px; margin:24px 0; }
+  .pasos { counter-reset:paso; list-style:none; padding:0; margin:24px 0; }
+  .pasos li {
+    counter-increment:paso; position:relative; padding-left:42px; margin-bottom:20px;
+  }
+  .pasos li::before {
+    content:counter(paso); position:absolute; left:0; top:1px;
+    width:26px; height:26px; border-radius:50%; background:var(--tinta); color:var(--papel);
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:600;
+  }
+  .correo {
+    display:block; background:var(--suave); border:1px solid var(--linea);
+    border-radius:12px; padding:20px 22px; margin:24px 0; text-decoration:none; color:var(--tinta);
+  }
+  .correo b { display:block; font-size:20px; letter-spacing:-0.02em; margin-bottom:4px; }
+  .correo span { color:var(--gris); font-size:15px; }
+  table { width:100%; border-collapse:collapse; margin:20px 0; font-size:15.5px; }
+  th, td { text-align:left; padding:11px 10px 11px 0; border-bottom:1px solid var(--linea); vertical-align:top; }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:0.07em; color:var(--gris); font-weight:600; }
+  td:first-child { width:46%; padding-right:18px; }
+  .pie {
+    margin-top:64px; padding-top:24px; border-top:1px solid var(--linea);
+    color:var(--gris); font-size:14px;
+  }
+  @media (max-width:520px) {
+    .envoltorio { padding:40px 20px 72px; }
+    h1 { font-size:28px; }
+    body { font-size:16px; }
+    table { font-size:14.5px; }
+  }
+</style>
+
+<link rel="canonical" href="https://get-habitus.com/eliminar-cuenta.html">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Habitus">
+<meta property="og:locale" content="es_BO">
+<meta property="og:url" content="https://get-habitus.com/eliminar-cuenta.html">
+<meta property="og:title" content="Eliminar tu cuenta · Habitus">
+<meta property="og:description" content="Cómo eliminar tu cuenta de Habitus y todos tus datos. Qué se borra, qué se conserva y cuánto tarda.">
+<meta property="og:image" content="https://get-habitus.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Habitus — anillo de tinta sobre papel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eliminar tu cuenta · Habitus">
+<meta name="twitter:description" content="Cómo eliminar tu cuenta de Habitus y todos tus datos. Qué se borra, qué se conserva y cuánto tarda.">
+<meta name="twitter:image" content="https://get-habitus.com/og.png">
+</head>
+<body>
+<div class="envoltorio">
+
+  <div class="marca">
+    <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#0A0A0A" stroke-width="8.5"/>
+      <circle cx="50" cy="14" r="13.5" fill="#FAFAF8"/>
+      <circle cx="50" cy="14" r="10.5" fill="#0A0A0A"/>
+    </svg>
+    <span>habitus</span>
+  </div>
+
+  <h1>Eliminar tu cuenta</h1>
+  <p class="fecha">Aplicación: <strong>Habitus</strong> · Desarrollador: Santiago Callaú, Santa Cruz de la Sierra, Bolivia</p>
+
+  <p>Podés eliminar tu cuenta de Habitus cuando quieras, sin dar explicaciones y sin costo. Esta página te dice cómo, qué se borra y cuánto tarda.</p>
+
+  <div class="destacado">
+    <p>No hace falta que tengas la aplicación instalada para pedirlo. No hace falta que inicies sesión en ninguna parte.</p>
+  </div>
+
+  <h2>Cómo pedirlo</h2>
+
+  <ol class="pasos">
+    <li><strong>Escribinos desde el correo con el que te registraste.</strong> Es la forma en que confirmamos que la cuenta es tuya: solo atendemos pedidos que llegan desde la misma dirección de la cuenta.</li>
+    <li><strong>Poné «Eliminar mi cuenta» en el asunto.</strong> No necesitás escribir nada más en el cuerpo.</li>
+    <li><strong>Te confirmamos por el mismo correo</strong> cuando esté hecho.</li>
+  </ol>
+
+  <a class="correo" href="mailto:support@get-habitus.com?subject=Eliminar%20mi%20cuenta">
+    <b>support@get-habitus.com</b>
+    <span>Tocá para escribir con el asunto ya puesto</span>
+  </a>
+
+  <h2>Qué se borra</h2>
+
+  <p>Se elimina de forma permanente todo lo que te identifica y todo lo que hiciste con la aplicación:</p>
+
+  <ul>
+    <li>Tu cuenta y tu acceso</li>
+    <li>Tu nombre y tu correo electrónico</li>
+    <li>Tus datos demográficos, si los cargaste: año de nacimiento, género y zona</li>
+    <li>Tus hábitos y tus metas</li>
+    <li>Tu historial de check-ins</li>
+    <li>Tu racha y tu historial de rachas</li>
+    <li>Tus puntos y todo tu historial de movimientos</li>
+    <li>Tus cupones, usados y sin usar</li>
+  </ul>
+
+  <div class="destacado">
+    <p><strong>Los puntos acumulados se pierden y no son reembolsables</strong>, porque no tienen valor monetario. Si tenés un cupón sin usar, usalo antes de pedir la baja.</p>
+  </div>
+
+  <h2>Qué se conserva, y por cuánto</h2>
+
+  <table>
+    <thead>
+      <tr><th>Qué</th><th>Cuánto tiempo y por qué</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Registros de canjes ya validados, <strong>sin tu identidad</strong></td>
+        <td>Hasta 12 meses. Son el comprobante del comercio de un descuento que ya entregó. Quedan como un número, desvinculados de vos: no se puede saber que fueron tuyos.</td>
+      </tr>
+      <tr>
+        <td>Estadísticas agregadas y anónimas</td>
+        <td>Sin plazo. Son conteos del tipo «cuántas visitas tuvo este local en marzo». No contienen ningún dato personal ni permiten reconstruir quién sos.</td>
+      </tr>
+      <tr>
+        <td>Tu correo, si nos escribiste a soporte</td>
+        <td>Hasta 90 días, solo en la casilla de correo, por si hay que responder algo pendiente. Después se elimina.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Nada de lo que se conserva permite identificarte, contactarte ni reconstruir tu actividad.</p>
+
+  <h2>Cuánto tarda</h2>
+
+  <p>Respondemos <strong>dentro de los 7 días</strong> y completamos el borrado <strong>dentro de los 30 días</strong> de tu pedido. En la práctica suele ser el mismo día.</p>
+
+  <h2>Si cambiás de opinión</h2>
+
+  <p>Mientras no hayamos completado el borrado, podés cancelarlo escribiéndonos al mismo correo. <strong>Una vez completado no hay vuelta atrás:</strong> no guardamos copias y no se puede recuperar nada.</p>
+
+  <p>Podés volver a crear una cuenta cuando quieras, pero va a empezar desde cero: sin racha, sin puntos y sin historial.</p>
+
+  <h2>Desinstalar no es lo mismo que borrar</h2>
+
+  <p>Si solo desinstalás la aplicación, tu cuenta y tus datos siguen existiendo. Para que se borren de verdad tenés que pedirlo por esta vía.</p>
+
+  <div class="pie">
+    <p>Habitus · Santa Cruz de la Sierra, Bolivia<br>
+    <a href="/privacidad.html">Política de privacidad</a> · <a href="/terminos.html">Términos y condiciones</a> · <a href="/">Inicio</a></p>
+  </div>
+
+</div>
+</body>
+</html>
